@@ -21,12 +21,20 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏
+    const str = `𝐅𝐔𝐑𝐈𝐎𝐔𝐒 - 𝐁𝐎𝐓
 
- ▢ *Hola,* ${taguser}
+ 🫎 *Hola,* ${taguser}
+ 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
+ 🤖 Creador : Furious
+ 💌 Numero ; +51 994 429 268
+ 💌 Adquirir : +51 994 429 268
+ 📵 Ig : @callme.angelz
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
- _*< TUS ESTADÍSTICAS />*_
+ _*< INFO. DEL USUARIO />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
  ▢ *Nivel:* ${level}
  ▢ *Experiencia:* ${exp}
  ▢ *Rango:* ${role}
@@ -35,16 +43,19 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ▢ *Tokens:* ${joincount}
  ▢ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
+ ┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
   _*< LISTA DE MENUS />*_
-  
+
+  ┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}menuaudios_
   ▢ _${usedPrefix}menuanimes_
   ▢ _${usedPrefix}labiblia_ (🔞)
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
  
  _*< SOBRE EL BOT />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}terminosycondiciones_
   ▢ _${usedPrefix}grupos_
   ▢ _${usedPrefix}estado_
@@ -57,10 +68,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}join *<wagp_url>*_
   ▢ _${usedPrefix}fixmsgespera_
   ▢ _bot_ (sin prefijo)
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< SUB-BOTS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}serbot --code_
   ▢ _${usedPrefix}serbot_
   ▢ _${usedPrefix}deletebot_
@@ -82,10 +94,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}disable audios_bot_
   ▢ _${usedPrefix}enable antiprivado_
   ▢ _${usedPrefix}disable antiprivado_
-  
+  ┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< JUEGOS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
   ▢ _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
   ▢ _${usedPrefix}ppt *<papel / tijera /piedra>*_
@@ -119,10 +132,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}pista_
   ▢ _${usedPrefix}akinator_
   ▢ _${usedPrefix}wordfind_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< ACT./DESACT. FUNC. />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}enable *welcome*_
   ▢ _${usedPrefix}disable *welcome*_
   ▢ _${usedPrefix}enable *modohorny*_
@@ -149,10 +163,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}disable *modoadmin*_
   ▢ _${usedPrefix}enable *antidelete*_
   ▢ _${usedPrefix}disable *antidelete*_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< DESCARGAS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
  ▢ _${usedPrefix}play *<txt>*_
  ▢ _${usedPrefix}play2 *<txt>*_
  ▢ _${usedPrefix}play.1 *<txt>*_
@@ -185,10 +200,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ▢ _${usedPrefix}dapk2 *<url>*_
  ▢ _${usedPrefix}xnxxdl *<url>*_ (🔞)
  ▢ _${usedPrefix}xvideosdl *<url>*_ (🔞)
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< BUSCADORES />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}githubsearch *<txt>*_
   ▢ _${usedPrefix}pelisplus *<txt>*_
   ▢ _${usedPrefix}modapk *<txt>*_
@@ -201,10 +217,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}wikipedia *<txt>*_
   ▢ _${usedPrefix}ytsearch *<txt>*_
   ▢ _${usedPrefix}playstore *<txt>*_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< GRUPOS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}add *num>*_
   ▢ _${usedPrefix}kick *<@tag>*_
   ▢ _${usedPrefix}kick2 *<@tag>*_
@@ -233,10 +250,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}destraba_
   ▢ _${usedPrefix}setpp *<img>*_
   ▢ _admins *<txt>*_ (sin prefijo)
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< CONVERTIDORES />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}toanime *<img>*_
   ▢ _${usedPrefix}togifaud *<video>*_
   ▢ _${usedPrefix}toimg *<sticker>*_
@@ -247,10 +265,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}tourl *<video / img / audio>*_
   ▢ _${usedPrefix}tts *<idioma> <txt>*_
   ▢ _${usedPrefix}tts *<efecto> <txt>*_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< EFECTOS & LOGOS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}logos *<efecto> <txt>*_
   ▢ _${usedPrefix}logochristmas *<txt>*_
   ▢ _${usedPrefix}logocorazon *<txt>*_
@@ -261,18 +280,20 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}itssostupid_
   ▢ _${usedPrefix}pixelar_
   ▢ _${usedPrefix}blur_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< FRASES & TEXTOS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}piropo_
   ▢ _${usedPrefix}consejo_
   ▢ _${usedPrefix}fraseromantica_
   ▢ _${usedPrefix}historiaromantica_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< ALEATORIO />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}kpop *<blackpink/exo/bts>*_
   ▢ _${usedPrefix}cristianoronaldo_
   ▢ _${usedPrefix}messi_
@@ -300,10 +321,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}hacker_
   ▢ _${usedPrefix}planeta_
   ▢ _${usedPrefix}randomprofile_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< EFECTOS P. AUDIOS />*_
-
+ 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
 *- Responde a un audio o nota de voz.*
 
   ▢ _${usedPrefix}bass_
@@ -318,17 +340,19 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}slow_
   ▢ _${usedPrefix}smooth_
   ▢ _${usedPrefix}tupai_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< CHAT ANÓNIMO />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}start_
   ▢ _${usedPrefix}next_
   ▢ _${usedPrefix}leave_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< HERRAMIENTAS />*_
- 
+
+ ┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}inspect *<wagc_url>*_
   ▢ _${usedPrefix}chatgpt *<txt>*_
   ▢ _${usedPrefix}delchatgpt
@@ -358,10 +382,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}igstalk *<usr>*_
   ▢ _${usedPrefix}tiktokstalk *<usr>*_
   ▢ _${usedPrefix}img *<txt>*_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< ECONOMÍA />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}adventure_
   ▢ _${usedPrefix}cazar_
   ▢ _${usedPrefix}cofre_
@@ -381,10 +406,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}robar *<cant> <@tag>*_
   ▢ _${usedPrefix}transfer *<tipo> <cant> <@tag>*_
   ▢ _${usedPrefix}unreg *<sn>*_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< STICKERS />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _${usedPrefix}sticker *<responder a img o video>*_
   ▢ _${usedPrefix}sticker *<url>*_
   ▢ _${usedPrefix}sticker2 *<responder a img o video>*_
@@ -411,10 +437,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}wm *<packname> <autor>*_
   ▢ _${usedPrefix}stickermarker *<efecto> <img>*_
   ▢ _${usedPrefix}stickerfilter *<efecto> <img>*_
-
+┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< PROPIETARIO Y MODS. />*_
 
+┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
   ▢ _> *<funcion>*_
   ▢ _=> *<funcion>*_
   ▢ _$ *<funcion>*_
@@ -481,7 +508,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   ▢ _${usedPrefix}addcmd *<txt>*_
   ▢ _${usedPrefix}delcmd_
   ▢ _${usedPrefix}saveimage_
-  ▢ _${usedPrefix}viewimage_`.trim();
+  ▢ _${usedPrefix}viewimage_
+  ┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚`.trim();
     if (m.isGroup) {
       // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};

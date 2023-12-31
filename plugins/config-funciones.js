@@ -1,5 +1,5 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
-const optionsFull = `_*< FUNCIONES DEL BOT />*_\n 
+const optionsFull = `_*< 𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐄𝐒 𝐃𝐄𝐋 𝐁𝐎𝐓 />*_\n 
 ▢ *Opción:* ✨ | WELCOME
 ▢ *Comando:* ${usedPrefix + command} welcome
 ▢ *Descripción:* Activa o desactiva la bienvenida en el grupo.

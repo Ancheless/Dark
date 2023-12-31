@@ -25,9 +25,9 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'The Mystic Bot';
   const info = ` _*< INFO - ESTADO />*_
 
- ▢ *Prop.:* Bruno Sobrino
- ▢ *WA:* +5219992095479
- ▢ *PayPal:* paypal.me/TheShadowBrokers133
+ ▢ *Prop.:* Furious
+ ▢ *WA:* +51994429268
+ ▢ *Yape:* 925 029 406
 
  ▢ *Ping:* ${rtime}
  ▢ *Uptime:* ${uptime}
@@ -57,7 +57,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+    document: { url: `https://www.instagram.com/gonza_04_05/` },
     mimetype: `application/${document}`,
     fileName: `Documento`,
     fileLength: 99999999999999,
@@ -66,13 +66,13 @@ const handler = async (m, { conn, usedPrefix }) => {
       forwardingScore: 200,
       isForwarded: true,
       externalAdReply: {
-        mediaUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+        mediaUrl: "https://www.instagram.com/gonza_04_05/",
         mediaType: 2,
         previewType: "pdf",
         title: "The Mystic - Bot",
         body: "Repositorio - GitHub",
         thumbnail: imagen1,
-        sourceUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+        sourceUrl: "https://www.instagram.com/gonza_04_05/",
       },
     },
     caption: info,

@@ -33,7 +33,7 @@ const handler = async (m, {conn, isAdmin, isOwner, args, usedPrefix, command}) =
   if (args[1]) {
 	 setTimeout(async () => {
       await conn.groupSettingUpdate(m.chat, `${isClose == 'announcement' ? 'not_announcement' : 'announcement'}`).then(async (_)=>{
-		    conn.reply(m.chat, `${isClose == 'not_announcement' ? '*El grupo ha sido cerrado, ¡ahora solo los administradores pueden enviar mensajes!*' : '*El grupo se ha abierto, ¡ahora todos los miembros pueden enviar mensajes!*'}!`);
+		    conn.reply(m.chat, `${isClose == 'not_announcement' ? '*𝐄𝐥 𝐠𝐫𝐮𝐩𝐨 𝐡𝐚 𝐬𝐢𝐝𝐨 𝐜𝐞𝐫𝐫𝐚𝐝𝐨, ¡𝐚𝐡𝐨𝐫𝐚 𝐬𝐨𝐥𝐨 𝐥𝐨𝐬 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫𝐞𝐬 𝐩𝐮𝐞𝐝𝐞𝐧 𝐞𝐧𝐯𝐢𝐚𝐫 𝐦𝐞𝐧𝐬𝐚𝐣𝐞𝐬!*' : '*𝐄𝐥 𝐠𝐫𝐮𝐩𝐨 𝐬𝐞 𝐡𝐚 𝐚𝐛𝐢𝐞𝐫𝐭𝐨, ¡𝐚𝐡𝐨𝐫𝐚 𝐭𝐨𝐝𝐨𝐬 𝐥𝐨𝐬 𝐦𝐢𝐞𝐦𝐛𝐫𝐨𝐬 𝐩𝐮𝐞𝐝𝐞𝐧 𝐞𝐧𝐯𝐢𝐚𝐫 𝐦𝐞𝐧𝐬𝐚𝐣𝐞𝐬!*'}!`);
 	    });
     }, timeoutset);
   }

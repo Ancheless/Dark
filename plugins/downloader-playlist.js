@@ -1,7 +1,7 @@
 import yts from 'yt-search';
 import fs from 'fs';
 const handler = async (m, {conn, text, usedPrefix, command}) => {
-  if (!text) throw `*[❗] Nombre de la canción faltante, por favor ingrese el comando más el nombre/titulo de una canción*\n\n*—◉ Ejemplo:*\n*${usedPrefix + command} Begin you*`;
+  if (!text) throw `*[❗] 𝐍𝐨𝐦𝐛𝐫𝐞 𝐝𝐞 𝐥𝐚 𝐜𝐚𝐧𝐜𝐢ó𝐧 𝐟𝐚𝐥𝐭𝐚𝐧𝐭𝐞, 𝐩𝐨𝐫 𝐟𝐚𝐯𝐨𝐫 𝐢𝐧𝐠𝐫𝐞𝐬𝐞 𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐦á𝐬 𝐞𝐥 𝐧𝐨𝐦𝐛𝐫𝐞/𝐭𝐢𝐭𝐮𝐥𝐨 𝐝𝐞 𝐮𝐧𝐚 𝐜𝐚𝐧𝐜𝐢ó𝐧*\n\n*—◉ 𝐄𝐣𝐞𝐦𝐩𝐥𝐨:*\n*${usedPrefix + command} Begin you*`;
   try {
     const vids_ = {
       from: m.sender,
@@ -14,7 +14,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
       global.videoList.splice(0, global.videoList.length);
     }
     const results = await yts(text);
-    const textoInfo = `*[❗] Puedes descargar el video que quieras de la siguiente forma:*
+    const textoInfo = `*[❗] 𝐏𝐮𝐞𝐝𝐞𝐬 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐫 𝐞𝐥 𝐯𝐢𝐝𝐞𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐚𝐬 𝐝𝐞 𝐥𝐚 𝐬𝐢𝐠𝐮𝐢𝐞𝐧𝐭𝐞 𝐟𝐨𝐫𝐦𝐚:*
 ◉ ${usedPrefix}audio <numero>
 ◉ ${usedPrefix}video <numero> 
 

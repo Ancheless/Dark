@@ -8,7 +8,7 @@ let limit2 = 400;
 let limit_a1 = 50;
 let limit_a2 = 400;
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-  if (!text) throw `_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Hace falta el título o enlace del video de YouTube.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Good Feeling - Flo Rida_`;
+  if (!text) throw `_*< DESCARGAS - PLAY />*_\n\n*[ ❗ ] 𝐇𝐚𝐜𝐞 𝐟𝐚𝐥𝐭𝐚 𝐞𝐥 𝐭í𝐭𝐮𝐥𝐨 𝐨 𝐞𝐧𝐥𝐚𝐜𝐞 𝐝𝐞𝐥 𝐯𝐢𝐝𝐞𝐨 𝐝𝐞 𝐘𝐨𝐮𝐓𝐮𝐛𝐞.*\n\n*[ 💡 ] 𝐄𝐣𝐞𝐦𝐩𝐥𝐨:* _${usedPrefix + command} Good Feeling - Flo Rida_`;
     const yt_play = await search(args.join(' '));
     let additionalText = '';
     if (command === 'play') {
@@ -28,7 +28,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     const fileSizeInMB = fileSizeInKB / 1024;
     const size = fileSizeInMB.toFixed(2);       
     if (size >= limit_a2) {  
-    await conn.sendMessage(m.chat, {text: `*[ ✔ ] Descargue su audio en ${audio}*`}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: `*[ ✔ ] 𝐃𝐞𝐬𝐜𝐚𝐫𝐠𝐮𝐞 𝐬𝐮 𝐚𝐮𝐝𝐢𝐨 𝐞𝐧 ${audio}*`}, {quoted: m});
     return;    
     }     
     if (size >= limit_a1 && size <= limit_a2) {  
@@ -38,7 +38,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     await conn.sendMessage(m.chat, {audio: buff_aud, mimetype: 'audio/mpeg', fileName: ttl + `.mp3`}, {quoted: m});   
     return;    
     }} catch {
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
+    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ❗ ] 𝐎𝐜𝐮𝐫𝐫𝐢ó 𝐮𝐧 𝐞𝐫𝐫𝐨𝐫. 𝐏𝐨𝐫 𝐟𝐚𝐯𝐨𝐫, 𝐢𝐧𝐭é𝐧𝐭𝐚𝐥𝐨 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨 𝐦á𝐬 𝐭𝐚𝐫𝐝𝐞.*';    
     }}
     if (command == 'play2') {
     try {   
@@ -50,7 +50,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     const fileSizeInMB2 = fileSizeInKB2 / 1024;
     const size2 = fileSizeInMB2.toFixed(2);       
     if (size2 >= limit2) {  
-    await conn.sendMessage(m.chat, {text: `_*< DESCARGAS - PLAY />*_\n\n*[ ✔ ] Descargue su vídeo en ${video}*`}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: `_*< DESCARGAS - PLAY />*_\n\n*[ ✔ ] 𝐃𝐞𝐬𝐜𝐚𝐫𝐠𝐮𝐞 𝐬𝐮 𝐯í𝐝𝐞𝐨 𝐞𝐧 ${video}*`}, {quoted: m});
     return;    
     }     
     if (size2 >= limit1 && size2 <= limit2) {  
@@ -60,7 +60,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     await conn.sendMessage(m.chat, {video: buff_vid, mimetype: 'video/mp4', fileName: ttl2 + `.mp4`}, {quoted: m});   
     return;    
     }} catch {
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
+    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ❗ ] 𝐎𝐜𝐮𝐫𝐫𝐢ó 𝐮𝐧 𝐞𝐫𝐫𝐨𝐫. 𝐏𝐨𝐫 𝐟𝐚𝐯𝐨𝐫, 𝐢𝐧𝐭é𝐧𝐭𝐚𝐥𝐨 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨 𝐦á𝐬 𝐭𝐚𝐫𝐝𝐞.*';    
     }
   }
 };

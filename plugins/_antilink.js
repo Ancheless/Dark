@@ -13,19 +13,19 @@ export async function before(m, {conn, isAdmin, isBotAdmin}) {
   const user = `@${m.sender.split`@`[0]}`;
   const isGroupLink = linkRegex.exec(m.text);
   const grupo = `https://chat.whatsapp.com`;
-  if (isAdmin && chat.antiLink && m.text.includes(grupo)) return m.reply('_*< ANTI-LINK />*_\n\n*[ ℹ️ ] El antilink está habilitado, pero el participante que envió el enlace es un administrador.*');
+  if (isAdmin && chat.antiLink && m.text.includes(grupo)) return m.reply('_*< ANTI-LINK />*_\n\n*[ ❗ ] 𝐄𝐥 𝐚𝐧𝐭𝐢𝐥𝐢𝐧𝐤 𝐞𝐬𝐭á 𝐡𝐚𝐛𝐢𝐥𝐢𝐭𝐚𝐝𝐨, 𝐩𝐞𝐫𝐨 𝐞𝐥 𝐩𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐧𝐭𝐞 𝐪𝐮𝐞 𝐞𝐧𝐯𝐢ó 𝐞𝐥 𝐞𝐧𝐥𝐚𝐜𝐞 𝐞𝐬 𝐮𝐧 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫.*');
   if (chat.antiLink && isGroupLink && !isAdmin) {
     if (isBotAdmin) {
       const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`;
       if (m.text.includes(linkThisGroup)) return !0;
     }
-    await this.sendMessage(m.chat, {text: `_*< ANTI-LINK />*_\n\n*[ ℹ️ ] El participante @user envió un enlace de un grupo de WhatsApp, por lo que será eliminado.*`, mentions: [m.sender]}, {quoted: m});
-    if (!isBotAdmin) return m.reply('_*< ANTI-LINK />*_\n\n*[ ℹ️ ] Para que el anti-link funcione correctamente es necesario que el bot sea administrador del grupo.*');
+    await this.sendMessage(m.chat, {text: `_*< ANTI-LINK />*_\n\n*[ ❗ ] 𝐄𝐥 𝐩𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐧𝐭𝐞 @𝐮𝐬𝐞𝐫 𝐞𝐧𝐯𝐢ó 𝐮𝐧 𝐞𝐧𝐥𝐚𝐜𝐞 𝐝𝐞 𝐮𝐧 𝐠𝐫𝐮𝐩𝐨 𝐝𝐞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩, 𝐩𝐨𝐫 𝐥𝐨 𝐪𝐮𝐞 𝐬𝐞𝐫á 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐝𝐨.*`, mentions: [m.sender]}, {quoted: m});
+    if (!isBotAdmin) return m.reply('_*< ANTI-LINK />*_\n\n*[ ❗ ] 𝐏𝐚𝐫𝐚 𝐪𝐮𝐞 𝐞𝐥 𝐚𝐧𝐭𝐢-𝐥𝐢𝐧𝐤 𝐟𝐮𝐧𝐜𝐢𝐨𝐧𝐞 𝐜𝐨𝐫𝐫𝐞𝐜𝐭𝐚𝐦𝐞𝐧𝐭𝐞 𝐞𝐬 𝐧𝐞𝐜𝐞𝐬𝐚𝐫𝐢𝐨 𝐪𝐮𝐞 𝐞𝐥 𝐛𝐨𝐭 𝐬𝐞𝐚 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫 𝐝𝐞𝐥 𝐠𝐫𝐮𝐩𝐨.*');
     if (isBotAdmin && bot.restrict) {
       await conn.sendMessage(m.chat, {delete: {remoteJid: m.chat, fromMe: false, id: bang, participant: delet}});
       const responseb = await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
       if (responseb[0].status === '404') return;
-    } else if (!bot.restrict) return m.reply('_*< ANTI-LINK />*_\n\n*[ ℹ️ ] Esta función está desactivada debido a que la función* _restrict_ *está habilitada.*');
+    } else if (!bot.restrict) return m.reply('_*< ANTI-LINK />*_\n\n*[ ❗ ] 𝐄𝐬𝐭𝐚 𝐟𝐮𝐧𝐜𝐢ó𝐧 𝐞𝐬𝐭á 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐚 𝐝𝐞𝐛𝐢𝐝𝐨 𝐚 𝐪𝐮𝐞 𝐥𝐚 𝐟𝐮𝐧𝐜𝐢ó𝐧* _𝐫𝐞𝐬𝐭𝐫𝐢𝐜𝐭_ *𝐞𝐬𝐭á 𝐡𝐚𝐛𝐢𝐥𝐢𝐭𝐚𝐝𝐚.*');
   }
   return !0;
 }

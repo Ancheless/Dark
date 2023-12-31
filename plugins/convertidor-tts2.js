@@ -19,7 +19,7 @@ const handler = async (m, { conn, usedPrefix, command, text, args }) => {
 
   if (!efecto) {
     let voiceList = await getVoiceList();
-    let responseText = `*[❗] No haz ingresado un efecto, por favor ingresa un efecto de voz.*\n\n*—◉ Elige uno de los siguientes efectos:*\n`;
+    let responseText = `*[❗] 𝐍𝐨 𝐡𝐚𝐳 𝐢𝐧𝐠𝐫𝐞𝐬𝐚𝐝𝐨 𝐮𝐧 𝐞𝐟𝐞𝐜𝐭𝐨, 𝐩𝐨𝐫 𝐟𝐚𝐯𝐨𝐫 𝐢𝐧𝐠𝐫𝐞𝐬𝐚 𝐮𝐧 𝐞𝐟𝐞𝐜𝐭𝐨 𝐝𝐞 𝐯𝐨𝐳.*\n\n*—◉ 𝐄𝐥𝐢𝐠𝐞 𝐮𝐧𝐨 𝐝𝐞 𝐥𝐨𝐬 𝐬𝐢𝐠𝐮𝐢𝐞𝐧𝐭𝐞𝐬 𝐞𝐟𝐞𝐜𝐭𝐨𝐬:*\n`;
 
     for (let i = 0, count = 0; count < 100 && i < voiceList.resultado.length; i++) {
       const entry = voiceList.resultado[i];
@@ -41,9 +41,9 @@ const handler = async (m, { conn, usedPrefix, command, text, args }) => {
     }
   }
 
-  if (!efectoValido) return conn.sendMessage(m.chat, { text: `*[❗] El efecto proporcionado no existe en la lista, utiliza ${usedPrefix + command} para conocer la lista de efectos.*` }, { quoted: m });
+  if (!efectoValido) return conn.sendMessage(m.chat, { text: `*[❗] 𝐄𝐥 𝐞𝐟𝐞𝐜𝐭𝐨 𝐩𝐫𝐨𝐩𝐨𝐫𝐜𝐢𝐨𝐧𝐚𝐝𝐨 𝐧𝐨 𝐞𝐱𝐢𝐬𝐭𝐞 𝐞𝐧 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚, 𝐮𝐭𝐢𝐥𝐢𝐳𝐚 ${usedPrefix + command} 𝐩𝐚𝐫𝐚 𝐜𝐨𝐧𝐨𝐜𝐞𝐫 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐞𝐟𝐞𝐜𝐭𝐨𝐬.*` }, { quoted: m });
 
-  if (!texto) return conn.sendMessage(m.chat, {text: `*[❗] Ingresa el texto que quieras convertir a audio.*\n\n*—◉ Ejemplo:*\n*◉ ${usedPrefix + command} ${efecto} Hola, este es un ejemplo de uso del comando.*`}, {quoted: m});
+  if (!texto) return conn.sendMessage(m.chat, {text: `*[❗] 𝐈𝐧𝐠𝐫𝐞𝐬𝐚 𝐞𝐥 𝐭𝐞𝐱𝐭𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐚𝐬 𝐜𝐨𝐧𝐯𝐞𝐫𝐭𝐢𝐫 𝐚 𝐚𝐮𝐝𝐢𝐨.*\n\n*—◉ Ejemplo:*\n*◉ ${usedPrefix + command} ${efecto} 𝐇𝐨𝐥𝐚, 𝐞𝐬𝐭𝐞 𝐞𝐬 𝐮𝐧 𝐞𝐣𝐞𝐦𝐩𝐥𝐨 𝐝𝐞 𝐮𝐬𝐨 𝐝𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨.*`}, {quoted: m});
 
   let masivo = await makeTTSRequest(texto, efecto);
   conn.sendMessage(m.chat, {audio: {url: masivo.resultado}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
@@ -79,10 +79,10 @@ async function getVoiceList() {
       name: entry.name,
       lenguaje: entry.language  
     }));
-    return { resultado: simplifiedList ? simplifiedList : '[❗] Error, no se obtuvo respuesta de la API.' };
+    return { resultado: simplifiedList ? simplifiedList : '[❗] 𝐄𝐫𝐫𝐨𝐫, 𝐧𝐨 𝐬𝐞 𝐨𝐛𝐭𝐮𝐯𝐨 𝐫𝐞𝐬𝐩𝐮𝐞𝐬𝐭𝐚 𝐝𝐞 𝐥𝐚 𝐀𝐏𝐈.' };
   } catch (error) {
     console.error('Error:', error);
-    return { resultado: '[❗] Error, no se obtuvo respuesta de la API.' };
+    return { resultado: '[❗] 𝐄𝐫𝐫𝐨𝐫, 𝐧𝐨 𝐬𝐞 𝐨𝐛𝐭𝐮𝐯𝐨 𝐫𝐞𝐬𝐩𝐮𝐞𝐬𝐭𝐚 𝐝𝐞 𝐥𝐚 𝐀𝐏𝐈.' };
     throw error;
   }
 }
@@ -101,9 +101,9 @@ async function makeTTSRequest(texto, efecto) {
     const eventData = events.find(event => event.includes('"stage":"complete"'));
     const urlMatch = eventData.match(/"url":"([^"]+)"/);
     const url = urlMatch ? urlMatch[1] : null;
-    return { resultado: url ? url : '[❗] URL no encontrada en la respuesta.' };
+    return { resultado: url ? url : '[❗] 𝐔𝐑𝐋 𝐧𝐨 𝐞𝐧𝐜𝐨𝐧𝐭𝐫𝐚𝐝𝐚 𝐞𝐧 𝐥𝐚 𝐫𝐞𝐬𝐩𝐮𝐞𝐬𝐭𝐚.' };
   } catch (error) {
     console.error('Error:', error);
-    return { resultado: '[❗] Error, no se obtuvo respuesta de la API.' };
+    return { resultado: '[❗] 𝐄𝐫𝐫𝐨𝐫, 𝐧𝐨 𝐬𝐞 𝐨𝐛𝐭𝐮𝐯𝐨 𝐫𝐞𝐬𝐩𝐮𝐞𝐬𝐭𝐚 𝐝𝐞 𝐥𝐚 𝐀𝐏𝐈.' };
   }
 }

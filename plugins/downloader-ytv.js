@@ -5,7 +5,7 @@ import ytdl from 'ytdl-core';
 import axios from 'axios';
 import {bestFormat, getUrlDl} from '../lib/y2dl.js';
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-  if (!args[0]) throw '*[❗] Uso incorrecto del comando, ingrese un enlace / link de YouTube.*';
+  if (!args[0]) throw '*[❗] 𝐔𝐬𝐨 𝐢𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭𝐨 𝐝𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨, 𝐢𝐧𝐠𝐫𝐞𝐬𝐞 𝐮𝐧 𝐞𝐧𝐥𝐚𝐜𝐞 / 𝐥𝐢𝐧𝐤 𝐝𝐞 𝐘𝐨𝐮𝐓𝐮𝐛𝐞.*';
   let enviando;
   if (enviando) return  
       enviando = true    
@@ -22,15 +22,15 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
             youtubeLink = matchingItem.urls[index];
           } else {
             enviando = false  
-            throw `*[❗] No se encontro un enlace para ese numero, por favor ingrese un numero entre el 1 y el ${matchingItem.urls.length}*`;
+            throw `*[❗] 𝐍𝐨 𝐬𝐞 𝐞𝐧𝐜𝐨𝐧𝐭𝐫𝐨 𝐮𝐧 𝐞𝐧𝐥𝐚𝐜𝐞 𝐩𝐚𝐫𝐚 𝐞𝐬𝐞 𝐧𝐮𝐦𝐞𝐫𝐨, 𝐩𝐨𝐫 𝐟𝐚𝐯𝐨𝐫 𝐢𝐧𝐠𝐫𝐞𝐬𝐞 𝐮𝐧 𝐧𝐮𝐦𝐞𝐫𝐨 𝐞𝐧𝐭𝐫𝐞 𝐞𝐥 𝟏 𝐲 𝐞𝐥 ${matchingItem.urls.length}*`;
           }
         } else {
           enviando = false  
-          throw `*[❗] Para poder hacer uso del comando de esta forma (${usedPrefix + command} <numero>), por favor realiza la busqueda de videos con el comando ${usedPrefix}playlist <texto>*`;
+          throw `*[❗] 𝐏𝐚𝐫𝐚 𝐩𝐨𝐝𝐞𝐫 𝐡𝐚𝐜𝐞𝐫 𝐮𝐬𝐨 𝐝𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐝𝐞 𝐞𝐬𝐭𝐚 𝐟𝐨𝐫𝐦𝐚 (${usedPrefix + command} <numero>), 𝐩𝐨𝐫 𝐟𝐚𝐯𝐨𝐫 𝐫𝐞𝐚𝐥𝐢𝐳𝐚 𝐥𝐚 𝐛𝐮𝐬𝐪𝐮𝐞𝐝𝐚 𝐝𝐞 𝐯𝐢𝐝𝐞𝐨𝐬 𝐜𝐨𝐧 𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 ${usedPrefix}playlist <texto>*`;
         }
       } else {
         enviando = false  
-        throw `*[❗] Para poder hacer uso del comando de esta forma (${usedPrefix + command} <numero>), por favor realiza la busqueda de videos con el comando ${usedPrefix}playlist <texto>*`;
+        throw `*[❗] 𝐏𝐚𝐫𝐚 𝐩𝐨𝐝𝐞𝐫 𝐡𝐚𝐜𝐞𝐫 𝐮𝐬𝐨 𝐝𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐝𝐞 𝐞𝐬𝐭𝐚 𝐟𝐨𝐫𝐦𝐚 (${usedPrefix + command} <numero>), 𝐩𝐨𝐫 𝐟𝐚𝐯𝐨𝐫 𝐫𝐞𝐚𝐥𝐢𝐳𝐚 𝐥𝐚 𝐛𝐮𝐬𝐪𝐮𝐞𝐝𝐚 𝐝𝐞 𝐯𝐢𝐝𝐞𝐨𝐬 𝐜𝐨𝐧 𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 ${usedPrefix}playlist <texto>*`;
       }
     }
   }
@@ -46,11 +46,11 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     const roundedFileSizeInMB = fileSizeInMB.toFixed(2);
    if (fileSizeInMB > 100) {
     await conn.sendMessage(m.chat, {document: buff, caption: `*▢ Titulo:* ${ttl_1}\n*▢ Peso Del Video:* ${roundedFileSizeInMB} MB`, fileName: ttl_1 + '.mp4', mimetype: 'video/mp4'}, {quoted: m});
-    await conn.sendMessage(m.chat, {text: `*[ ✔ ] Video descargado y enviado exitosamente.*\n\n*—◉ Se envío en formato de docuemnto debido a que el video pesa ${roundedFileSizeInMB} MB y supera el limite establecido por WhatsApp.*\n*◉ Titulo:* ${ttl_1}`, edit: key}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: `*[ ✔ ] 𝐕𝐢𝐝𝐞𝐨 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐝𝐨 𝐲 𝐞𝐧𝐯𝐢𝐚𝐝𝐨 𝐞𝐱𝐢𝐭𝐨𝐬𝐚𝐦𝐞𝐧𝐭𝐞.*\n\n*—◉ 𝐒𝐞 𝐞𝐧𝐯í𝐨 𝐞𝐧 𝐟𝐨𝐫𝐦𝐚𝐭𝐨 𝐝𝐞 𝐝𝐨𝐜𝐮𝐞𝐦𝐧𝐭𝐨 𝐝𝐞𝐛𝐢𝐝𝐨 𝐚 𝐪𝐮𝐞 𝐞𝐥 𝐯𝐢𝐝𝐞𝐨 𝐩𝐞𝐬𝐚 ${roundedFileSizeInMB} 𝐌𝐁 𝐲 𝐬𝐮𝐩𝐞𝐫𝐚 𝐞𝐥 𝐥𝐢𝐦𝐢𝐭𝐞 𝐞𝐬𝐭𝐚𝐛𝐥𝐞𝐜𝐢𝐝𝐨 𝐩𝐨𝐫 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩.*\n*◉ Titulo:* ${ttl_1}`, edit: key}, {quoted: m});
     enviando = false
    } else {
     await conn.sendMessage(m.chat, {video: buff, caption: `*▢ Titulo:* ${ttl_1}\n*▢ Peso Del Video:* ${roundedFileSizeInMB} MB`, fileName: ttl_1 + '.mp4', mimetype: 'video/mp4'}, {quoted: m});
-    await conn.sendMessage(m.chat, {text: `*[ ✔ ] Video descargado exitosamente.*`, edit: key}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: `*[ ✔ ] 𝐕𝐢𝐝𝐞𝐨 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐝𝐨 𝐞𝐱𝐢𝐭𝐨𝐬𝐚𝐦𝐞𝐧𝐭𝐞.*`, edit: key}, {quoted: m});
     enviando = false   
    }
  } catch (ee) {
@@ -64,14 +64,14 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     const ttl = yt.title;
     const size = yt.video[q].fileSizeH;
     await conn.sendMessage(m.chat, {video: {url: dl_url}, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*▢ Titulo:* ${ttl}\n*▢ Peso Del Video:* ${size}`, thumbnail: await fetch(yt.thumbnail)}, {quoted: m});
-    await conn.sendMessage(m.chat, {text: '*[ ✔ ] Video descargado exitosamente.*', edit: key}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: '*[ ✔ ] 𝐕𝐢𝐝𝐞𝐨 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐝𝐨 𝐞𝐱𝐢𝐭𝐨𝐬𝐚𝐦𝐞𝐧𝐭𝐞.*', edit: key}, {quoted: m});
     enviando = false
   } catch (ee2) {
     console.log(ee2)
     try {
       const mediaa = await ytMp4(youtubeLink);
-      await conn.sendMessage(m.chat, {video: {url: mediaa.result}, fileName: `error.mp4`, caption: `_𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4'}, {quoted: m});
-      await conn.sendMessage(m.chat, {text: '*[ ✔ ] Video descargado exitosamente.*', edit: key}, {quoted: m});
+      await conn.sendMessage(m.chat, {video: {url: mediaa.result}, fileName: `error.mp4`, caption: `_Furious-Bot_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4'}, {quoted: m});
+      await conn.sendMessage(m.chat, {text: '*[ ✔ ] 𝐕𝐢𝐝𝐞𝐨 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐝𝐨 𝐞𝐱𝐢𝐭𝐨𝐬𝐚𝐦𝐞𝐧𝐭𝐞.*', edit: key}, {quoted: m});
       enviando = false
     } catch {
       try {
@@ -82,11 +82,11 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
         const n3 = lolh.result.size;
         const n4 = lolh.result.thumbnail;
         await conn.sendMessage(m.chat, {video: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*▢ Titulo:* ${n}\n*▢ Peso Del Video:* ${n3}`, thumbnail: await fetch(n4)}, {quoted: m});
-        await conn.sendMessage(m.chat, {text: '*[ ✔ ] Video descargado exitosamente.*', edit: key}, {quoted: m});
+        await conn.sendMessage(m.chat, {text: '*[ ✔ ] 𝐕𝐢𝐝𝐞𝐨 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐝𝐨 𝐞𝐱𝐢𝐭𝐨𝐬𝐚𝐦𝐞𝐧𝐭𝐞.*', edit: key}, {quoted: m});
         enviando = false
       } catch {
-        await conn.sendMessage(m.chat, {text: `*[ ❌ ] El video no pudo ser descargado ni enviado, vuelva a intentarlo.*`, edit: key}, {quoted: m});
-        throw '*[❗] Error, no fue posible descargar el video.*';
+        await conn.sendMessage(m.chat, {text: `*[ ❌ ] 𝐄𝐥 𝐯𝐢𝐝𝐞𝐨 𝐧𝐨 𝐩𝐮𝐝𝐨 𝐬𝐞𝐫 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐝𝐨 𝐧𝐢 𝐞𝐧𝐯𝐢𝐚𝐝𝐨, 𝐯𝐮𝐞𝐥𝐯𝐚 𝐚 𝐢𝐧𝐭𝐞𝐧𝐭𝐚𝐫𝐥𝐨.*`, edit: key}, {quoted: m});
+        throw '*[❗] 𝐄𝐫𝐫𝐨𝐫, 𝐧𝐨 𝐟𝐮𝐞 𝐩𝐨𝐬𝐢𝐛𝐥𝐞 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐫 𝐞𝐥 𝐯𝐢𝐝𝐞𝐨.*';
       }
     }
   }

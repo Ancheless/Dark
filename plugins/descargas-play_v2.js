@@ -6,7 +6,7 @@ let fileName;
 let apiUrl;
 let enviando = false;
 const handler = async (m, { command, usedPrefix, conn, text }) => {
-  if (!text) throw `_*< DESCARGAS - PLAY v2 />*_\n\n*[ ℹ️ ] Hace falta el título del video de YouTube.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Good Feeling - Flo Rida_\n\n*[ 💡 ] Ejemplo 2:* _${usedPrefix + command} https://youtu.be/JLWRZ8eWyZo?si=EmeS9fJvS_OkDk7p_`;
+  if (!text) throw `_*< DESCARGAS - PLAY v2 />*_\n\n*[ ❗ ] 𝐇𝐚𝐜𝐞 𝐟𝐚𝐥𝐭𝐚 𝐞𝐥 𝐭í𝐭𝐮𝐥𝐨 𝐝𝐞𝐥 𝐯𝐢𝐝𝐞𝐨 𝐝𝐞 𝐘𝐨𝐮𝐓𝐮𝐛𝐞.*\n\n*[ 💡 ] 𝐄𝐣𝐞𝐦𝐩𝐥𝐨:* _${usedPrefix + command} Good Feeling - Flo Rida_\n\n*[ 💡 ] Ejemplo 2:* _${usedPrefix + command} https://youtu.be/JLWRZ8eWyZo?si=EmeS9fJvS_OkDk7p_`;
 if (enviando) return;
     enviando = true
   try {
@@ -27,7 +27,7 @@ if (enviando) return;
 
     if (!data.resultado || !data.resultado.url) {
       enviando = false;
-      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ❗ ] 𝐎𝐜𝐮𝐫𝐫𝐢ó 𝐮𝐧 𝐞𝐫𝐫𝐨𝐫. 𝐏𝐨𝐫 𝐟𝐚𝐯𝐨𝐫, 𝐢𝐧𝐭é𝐧𝐭𝐚𝐥𝐨 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨 𝐦á𝐬 𝐭𝐚𝐫𝐝𝐞.*`;
     } else {
       try {
         if (command === 'play.1') {
@@ -56,7 +56,7 @@ if (enviando) return;
             }
           } catch {
             enviando = false;
-            throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+            throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ❗ ] 𝐎𝐜𝐮𝐫𝐫𝐢ó 𝐮𝐧 𝐞𝐫𝐫𝐨𝐫. 𝐏𝐨𝐫 𝐟𝐚𝐯𝐨𝐫, 𝐢𝐧𝐭é𝐧𝐭𝐚𝐥𝐨 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨 𝐦á𝐬 𝐭𝐚𝐫𝐝𝐞.*`;
           }
        }
     }
@@ -69,11 +69,11 @@ if (enviando) return;
       enviando = false;
     } else {
       enviando = false;
-      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+      throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ❗ ] 𝐎𝐜𝐮𝐫𝐫𝐢ó 𝐮𝐧 𝐞𝐫𝐫𝐨𝐫. 𝐏𝐨𝐫 𝐟𝐚𝐯𝐨𝐫, 𝐢𝐧𝐭é𝐧𝐭𝐚𝐥𝐨 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨 𝐦á𝐬 𝐭𝐚𝐫𝐝𝐞.*`;
     }
   } catch (error) {
     enviando = false;
-    throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+    throw `_*< DESCARGAS - PLAY V2 />*_\n\n*[ ❗ ] 𝐎𝐜𝐮𝐫𝐫𝐢ó 𝐮𝐧 𝐞𝐫𝐫𝐨𝐫. 𝐏𝐨𝐫 𝐟𝐚𝐯𝐨𝐫, 𝐢𝐧𝐭é𝐧𝐭𝐚𝐥𝐨 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨 𝐦á𝐬 𝐭𝐚𝐫𝐝𝐞.*`;
   }
 };
 handler.command = ['play.1', 'play.2'];

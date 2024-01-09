@@ -65,7 +65,7 @@ global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
 global.wm2 = `${dia} ${fecha}\nFurious - Bot`;
-global.gt = 'The Mystic - Bot';
+global.gt = 'Furious - Bot';
 global.mysticbot = 'Furious - Bot';
 global.md = 'https://www.instagram.com/gonza_04_05/';
 global.mysticbot = 'https://www.instagram.com/gonza_04_05/';

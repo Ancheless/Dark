@@ -21,15 +21,15 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `𝐅𝐔𝐑𝐈𝐎𝐔𝐒 - 𝐁𝐎𝐓
+    const str = `DARK ZONE - BOT
 
  🫎 *Hola,* ${taguser}
  
 ┎━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┒
- 🤖 Creador : Furious
- 💌 Numero ; +51 994 429 268
- 💌 Adquirir : +51 994 429 268
- 📵 Ig : @callme.angelz
+ 🤖 Creador : ᴅᶻ botcito
+ 💌 Numero ; wa.me/+543585179343
+ 💌 Adquirir : wa.me/+51994429268
+ 📵 Ig : @dark.zone__
 ┖━━━━━━━ ∙ʚ🧡ɞ∙ ━━━━━━━┚
 
  _*< INFO. DEL USUARIO />*_
@@ -39,7 +39,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ▢ *Experiencia:* ${exp}
  ▢ *Rango:* ${role}
  ▢ *Diamantes:* ${limit}
- ▢ *FuriousCoins:* ${money}
+ ▢ *DzCoins:* ${money}
  ▢ *Tokens:* ${joincount}
  ▢ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
